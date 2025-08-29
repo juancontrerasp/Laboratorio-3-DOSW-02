@@ -68,6 +68,8 @@
 ---
 
 
+
+
 ### 💳 Reto 2 - Diseñando
 
 ## 📜 Historias de Usuario
@@ -141,3 +143,7 @@
 ## Diagrama de Casos de Uso
 
 ![Diagrama de Casos](/Laboratorio-3-DOSW/docs/uml/casosdeuso.png)
+
+## Diagrma de Clases
+
+![Diagrama de Clases](/Laboratorio-3-DOSW/docs/uml/clases.png)
