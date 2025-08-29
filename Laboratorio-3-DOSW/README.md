@@ -6,4 +6,4 @@
 - Nikolas Martinez
 
 ## Evidencias:
-Aquí se irán agregando las evidencias pedidas durante el laboratorio.
+![Evidencia del historial de los commits](/Laboratorio-3-DOSW/docs/imagenes/historialCommits.png)
