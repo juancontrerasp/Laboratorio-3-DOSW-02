@@ -148,5 +148,44 @@
 
 ![Diagrama de Clases](/Laboratorio-3-DOSW/docs/uml/clases.png)
 
+
 ## Excel
 ![Tabla Excel](/Laboratorio-3-DOSW/docs/imagenes/atributosCalidad.png)
+
+# Reto 3 - Planning Poker
+
+Este programa en Java implementa una simulación básica de **Planning Poker**, técnica utilizada en metodologías ágiles para estimar el esfuerzo de historias de usuario en un equipo de desarrollo.
+
+## 🚀 Descripción
+
+- El usuario ingresa un conjunto de **historias de usuario**.
+- Se define el número de **integrantes del equipo**.
+- Cada integrante **vota** utilizando la **secuencia de Fibonacci** (1, 2, 3, 5, 8, 13).
+- Si todos los votos son iguales, se logra el **consenso**.
+- Si los votos divergen, se pide discutir y volver a votar.
+- Finalmente, se genera un **resumen con las estimaciones finales** de cada historia.
+
+---
+
+## 📐 Principios de Diseño Utilizados
+
+### ✅ Principio de Responsabilidad Única (SRP)
+Cada parte del código tiene una única responsabilidad:
+- Lectura de entradas del usuario.
+- Validación de votos.
+- Verificación del consenso.
+- Impresión del resumen.
+
+---
+
+### ✅ Principio de Abierto/Cerrado (OCP)
+El uso de la **lista de Fibonacci** (`List<Integer> fibonacci = Arrays.asList(1, 2, 3, 5, 8, 13);`) facilita modificar o ampliar los valores permitidos sin necesidad de reestructurar la lógica principal.
+ 
+---
+
+## 🎭 Patrones de Diseño Utilizados
+
+### 🔹 Patrón **Iterator**
+Se utiliza al recorrer listas (`for (String historia : historias)` y `for (Map.Entry<String, Integer> e : estimaciones.entrySet())`) para acceder a los elementos de manera uniforme sin exponer su implementación interna.
+
+---
