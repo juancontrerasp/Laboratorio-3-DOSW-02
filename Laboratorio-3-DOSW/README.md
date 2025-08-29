@@ -147,3 +147,6 @@
 ## Diagrma de Clases
 
 ![Diagrama de Clases](/Laboratorio-3-DOSW/docs/uml/clases.png)
+
+## Excel
+![Tabla Excel](/Laboratorio-3-DOSW/docs/imagenes/atributosCalidad.png)
