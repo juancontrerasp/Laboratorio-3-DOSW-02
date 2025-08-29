@@ -100,3 +100,7 @@
 
 - Consultar transacciones:
     Como Bankify quiero consultar transacciones para poder monitorear posibles casos de fraude.
+
+## 📸 Diagrama de Contexto
+
+![Diagrama de Contexto](/Laboratorio-3-DOSW/docs/imagenes/historialCommits.png)
