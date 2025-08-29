@@ -1,66 +1,69 @@
-# Laboratorio-3-DOSW-02
+# 💻 Laboratorio 3 - DOSW-02
 
 ---
 
-## Integrantes:
-- Maria Belen
+## 👥 Integrantes
+
+- Maria Belén
 - Juan Pablo Contreras
 - Nikolas Martinez
 
 ---
 
-## Evidencias commits:
-![Evidencia del historial de los commits](/Laboratorio-3-DOSW/docs/imagenes/historialCommits.png)
+## 📸 Evidencia de Commits
 
-## Evidencias:
+![Evidencia del historial de los commits](/Laboratorio-3-DOSW/docs/imagenes/historialCommits.png)
 
 ---
 
-# **Reto 1**
+## 🚀 Evidencias de Desarrollo
 
-## Las reglas de negocio serían:
-1. Los números de cuenta deben tener exactamente 10 dígitos
-2. Los dos primeros dígitos tienen que corresponder a un banco registrado. A Bancolombia le corresponde 01 y a Davivienda 02.
-3. Los saldos de las cuentas no pueden ser negativos.
-4. Solo se pueden realizar consultas y depósito en cuentas creadas y validadas.
-5. Los números de cuenta no pueden tener letras ni caracteres especiales.
+### 🔐 Reto 1 - Sistema Bancario Simulado
 
-Funcionalidades Principales
+---
 
- ### 1. Gestión de cuentas
+## 📜 Reglas de Negocio
 
-    - Crear una cuenta bancaria (validando el número).
+1. ✅ Los números de cuenta deben tener exactamente **10 dígitos**.
+2. 🏦 Los **dos primeros dígitos** deben corresponder a un banco registrado:
+    - `01` → **Bancolombia**
+    - `02` → **Davivienda**
+3. 🚫 Los saldos **no pueden ser negativos**.
+4. 🔍 Solo se permiten **consultas y depósitos** en cuentas **creadas y validadas**.
+5. 🔢 Los números de cuenta **no pueden contener letras ni caracteres especiales**.
 
-    - Validar la existencia y el formato de la cuenta.
+---
 
+## ⚙️ Funcionalidades Principales
 
+### 🏦 1. Gestión de Cuentas
+- Crear una cuenta bancaria (validando el número).
+- Validar la existencia y formato de la cuenta.
 
-### 2. Servicios financieros básicos
+### 💰 2. Servicios Financieros Básicos
+- Consultar el saldo de una cuenta.
+- Realizar un depósito en una cuenta existente.
 
-    - Consultar el saldo de una cuenta.
+### 🔒 3. Seguridad y Calidad del Código
+- Implementación con **pruebas automatizadas**.
+- Validación de reglas de negocio en **cada operación**.
 
-    - Realizar un depósito en una cuenta existente.
+---
 
+## 🎭 Actores Principales
 
+- 👤 Clientes
+- 🖥️ Sistema Bankify
+- 🏦 Bancos Asociados
+- ⚙️ Sistema
 
-### . Seguridad y calidad de código
+---
 
-    - Implementación con pruebas automatizadas.
+## ⚠️ Precondiciones del Sistema
 
-    - Validación de reglas de negocio en cada operación.
+- Tener bancos asociados a Bankify.
+- Disponer de un sistema que **automatice la generación** de números de cuenta.
+- Contar con un medio para la **verificación de datos del usuario**.
 
-## Actores principales:
+---
 
-- Clientes
-
-- Sistema Bankify
-
-- Bancos asociados
-
-## Precondiciones necesarias para el sistema:
-
-- Tener bancos asociados a Bankify
-
-- Disponer de un sistema que automatice la generación de números de cuenta
-
-- Contar con un medio para la verificación de datos del usuario
