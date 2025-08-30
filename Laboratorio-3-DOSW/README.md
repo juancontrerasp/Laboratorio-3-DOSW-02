@@ -138,19 +138,19 @@
 
 ## 📸 Diagrama de Contexto
 
-![Diagrama de Contexto](/Laboratorio-3-DOSW/docs/uml/diagramaDeContexto.png)
+![Diagrama de Contexto](docs/uml/diagramaDeContexto.png)
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de Casos](/Laboratorio-3-DOSW/docs/uml/casosdeuso.png)
+![Diagrama de Casos](docs/uml/casosdeuso.png)
 
 ## Diagrma de Clases
 
-![Diagrama de Clases](/Laboratorio-3-DOSW/docs/uml/clases.png)
+![Diagrama de Clases](docs/uml/clases.png)
 
 
 ## Excel
-![Tabla Excel](/Laboratorio-3-DOSW/docs/imagenes/atributosCalidad.png)
+![Tabla Excel](docs/imagenes/atributosCalidad.png)
 
 # Reto 3 - Planning Poker
 
