@@ -7,14 +7,18 @@ public class Bankify {
     private AccountValidator accountValidator;
     private AccountManagement accountManagement;
 
+    public Bankify() {
+        accountValidator = new AccountValidator();
+        accountManagement = new AccountManagement();
+    }
+
     public boolean doesTheAccountExist(String account){
         return userAccounts.get(account)!= null;
     }
 
-    public void createAccount(User user,Bank bank){
-        Account accountCreated = accountManagement.createAccount();
-        if ( accountValidator.validateAccountNumber(accountCreated.getAccountNumber(),bank) ){
-            userAccounts.put(accountCreated.getAccountNumber(),accountCreated);
+    public void createAccount(User user,Bank bank, String accountNumber){
+        if ( accountValidator.validateAccountNumber(accountNumber,bank) ){
+            userAccounts.put(accountNumber, accountManagement.createAccount(user, accountNumber,bank));
         }
     }
 }
