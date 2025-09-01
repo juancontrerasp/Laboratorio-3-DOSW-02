@@ -15,7 +15,7 @@ public class Account {
         return accountBalance;
     }
 
-    public void setAccountBalance(BigDecimal accountBalanceToAdd) {
+    public void addBalance(BigDecimal accountBalanceToAdd) {
         accountBalance = accountBalance.add(accountBalanceToAdd);
     }
 
