@@ -9,6 +9,7 @@ public class Account {
     private Bank bank;
     private ArrayList<Movement> movements;
     private User user;
+    private AccountMovementManagement amm;
 
     public Account(User user, String accountNumber, Bank bank) {
         this.accountNumber = accountNumber;
@@ -16,6 +17,10 @@ public class Account {
         this.accountBalance = new BigDecimal(0);
         this.movements = new ArrayList<>();
         this.user = user;
+    }
+
+    public void setAmm(AccountMovementManagement amm) {
+        this.amm = amm;
     }
 
     public String getAccountNumber() {
@@ -31,6 +36,10 @@ public class Account {
     }
 
     public void makeMovement(BigDecimal amount, String to){
-        movements.add(new Movement(amount,accountNumber,to));
+        amm.realizeMovement(this,to,amount);
     }
+    public void addMovement(Movement movement){
+        movements.add(movement);
+    }
+
 }
