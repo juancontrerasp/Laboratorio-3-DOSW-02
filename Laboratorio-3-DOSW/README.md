@@ -12,7 +12,7 @@
 
 ## 📸 Evidencia de Commits
 
-![Evidencia del historial de los commits](/Laboratorio-3-DOSW/docs/imagenes/historialCommits.png)
+![Evidencia del historial de los commits](docs/imagenes/historialCommits.png)
 
 ---
 
@@ -188,4 +188,6 @@ El uso de la **lista de Fibonacci** (`List<Integer> fibonacci = Arrays.asList(1,
 ### 🔹 Patrón **Iterator**
 Se utiliza al recorrer listas (`for (String historia : historias)` y `for (Map.Entry<String, Integer> e : estimaciones.entrySet())`) para acceder a los elementos de manera uniforme sin exponer su implementación interna.
 
+## 📸 Evidencia
+![Reto 3](docs/imagenes/evidenciaReto3.png)
 ---

@@ -1,3 +1,5 @@
+package edu.dosw.lab.agilismo;
+
 import java.util.*;
 
 public class Reto3 {
@@ -31,7 +33,7 @@ public class Reto3 {
                 }
                 consenso = votos.stream().allMatch(v -> v.equals(votos.get(0)));
                 if (consenso) {
-                    System.out.println("Excelente, se llegó al conseso de: " + votos.get(0));
+                    System.out.println("Excelente, se llegó al consenso de: " + votos.get(0));
                     valor = votos.get(0);
                 } else {
                     System.out.println("Votos divergentes – Discutan y vuelvan a votar");
