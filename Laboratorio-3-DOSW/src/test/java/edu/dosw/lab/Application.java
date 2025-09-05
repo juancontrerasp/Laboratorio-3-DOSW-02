@@ -1,4 +1,4 @@
-package edu.dosw.lab;
+package test.java.edu.dosw.lab;
 
 import org.junit.jupiter.api.Test;
 
