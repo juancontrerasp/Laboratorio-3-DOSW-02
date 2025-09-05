@@ -272,3 +272,9 @@ En sí, fue necesario añadir tests para comprobar que las reglas de negocio rel
 ![Resultado1](docs/imagenes/sonarqube1.png)
 ![Resultado2](docs/imagenes/sonarqube2.png)
 ![Resultado3](docs/imagenes/sonarqube3.png)
+
+# Reflexiones
+
+## Juan Pablo
+
+Yo creo que hacer pruebas es como revisar un trabajo antes de entregarlo. Sirve para detectar errores pequeños o grandes, y así corregirlos a tiempo. También da confianza al equipo y al cliente de que el software es confiable y útil. Sin pruebas, sería como lanzar algo a ciegas.
