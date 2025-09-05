@@ -278,3 +278,7 @@ En sí, fue necesario añadir tests para comprobar que las reglas de negocio rel
 ## Juan Pablo
 
 Yo creo que hacer pruebas es como revisar un trabajo antes de entregarlo. Sirve para detectar errores pequeños o grandes, y así corregirlos a tiempo. También da confianza al equipo y al cliente de que el software es confiable y útil. Sin pruebas, sería como lanzar algo a ciegas.
+
+## Nikolas
+
+Personalmente considero que es importante realizar pruebas a un software diseñado basicamente por que ademas de hacernos ver posibles errores y esas cosas, tambien nos puede servir de utilidad para desarrollar mejores alternativas a la solucion de un problema cosa que vemos con el tercer paso de TDD que es refactor, ahi uno puede confirmar que las pruebas no son solo para debug si no tambien para hacer un codigo mas optimo y limpio.
