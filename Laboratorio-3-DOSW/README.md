@@ -192,12 +192,12 @@ Se utiliza al recorrer listas (`for (String historia : historias)` y `for (Map.E
 ![Resultados del código de Reto 3](docs/imagenes/evidenciaReto3.png)
 ---
 
-# Reto 4 - Tiempo De Desarrollo
+# ⏱ Reto 4 - Tiempo De Desarrollo
 
-## Cómo Resolvimos el Reto
+## ✅ Cómo Resolvimos el Reto
 Para resolver este reto, trabajamos en equipo basándonos en los retos anteriores. Seguimos el ciclo de Test-Driven Development (TDD): Rojo (escribir pruebas que fallen), Verde (implementar código para que pasen las pruebas) y Refactor (mejorar el código sin alterar su funcionalidad). Implementamos las clases principales utilizando Java, JUnit 5 para las pruebas unitarias, Streams y Lambdas para optimizar el código, y agregamos JavaDoc a cada método y clase.
 
-### Creación de Clases Modelo Principales
+### 🔹 Creación de Clases Modelo Principales
 Creamos las clases modelo clave con sus atributos y métodos (getters y setters):
 - **`Account`**: Incluye número de cuenta, saldo, banco, historial de movimientos y usuario asociado. Métodos para agregar saldo y realizar movimientos.
 - **`User`**: Gestiona una lista de cuentas, calcula el saldo total usando Streams (e.g., `accounts.stream().map(Account::getAccountBalance).reduce(BigDecimal.ZERO, BigDecimal::add)`), y métodos para obtener saldos y realizar movimientos.
@@ -207,13 +207,13 @@ Creamos las clases modelo clave con sus atributos y métodos (getters y setters)
 
 Todas las clases incluyen JavaDoc detallando su propósito y métodos.
 
-### Implementación de la Validación de Cuentas con TDD
+### 🔹 Implementación de la Validación de Cuentas con TDD
 Aplicamos TDD para la clase `AccountValidator`:
 - **Rojo**: Escribimos pruebas unitarias en `AccountValidatorTest` usando JUnit 5. Incluimos casos para números nulos, formatos inválidos (usando `@ParameterizedTest` con Streams para proveedores de datos), prefijos incorrectos y válidos.
 - **Verde**: Implementamos `validateAccountNumber` para verificar si el número es de 10 dígitos numéricos y comienza con el prefijo del banco (usando `matches("^[0-9]{10}$")` y `startsWith(bank.getCodigo())`).
 - **Refactor**: Optimizamos el código para mayor claridad, utilizando expresiones regulares y manejando nulos explícitamente. Usamos Streams en los proveedores de pruebas para generar datos de entrada variados.
 
-### Evidencia
+### 📸 Evidencia
 
 ![pruebas1](docs/imagenes/pruebas1.jpeg)
 
@@ -226,7 +226,7 @@ Aplicamos TDD para las clases `AccountManagement`, `AccountMovementManagement` y
 Incluimos JavaDoc en todos los métodos, describiendo parámetros, retornos y excepciones.
 
 
-### Evidencia
+### 📸 Evidencia
 
 ![pruebas2](docs/imagenes/pruebas2.png)
 
@@ -273,12 +273,15 @@ En sí, fue necesario añadir tests para comprobar que las reglas de negocio rel
 ![Resultado2](docs/imagenes/sonarqube2.png)
 ![Resultado3](docs/imagenes/sonarqube3.png)
 
-# Reflexiones
+---
+
+# ☕ Reflexiones
 
 ## Juan Pablo
-
-Yo creo que hacer pruebas es como revisar un trabajo antes de entregarlo. Sirve para detectar errores pequeños o grandes, y así corregirlos a tiempo. También da confianza al equipo y al cliente de que el software es confiable y útil. Sin pruebas, sería como lanzar algo a ciegas.
+- Yo creo que hacer pruebas es como revisar un trabajo antes de entregarlo. Sirve para detectar errores pequeños o grandes, y así corregirlos a tiempo. También da confianza al equipo y al cliente de que el software es confiable y útil. Sin pruebas, sería como lanzar algo a ciegas.
 
 ## Nikolas
+- Personalmente, considero que es importante realizar pruebas a un software diseñado basicamente porque, además de hacernos ver posibles errores y esas cosas, también nos puede servir de utilidad para desarrollar mejores alternativas a la solucion de un problema cosa que vemos con el tercer paso de TDD que es refactor, ahi uno puede confirmar que las pruebas no son solo para debug, sino también para hacer un codigo más óptimo y limpio.
 
-Personalmente considero que es importante realizar pruebas a un software diseñado basicamente por que ademas de hacernos ver posibles errores y esas cosas, tambien nos puede servir de utilidad para desarrollar mejores alternativas a la solucion de un problema cosa que vemos con el tercer paso de TDD que es refactor, ahi uno puede confirmar que las pruebas no son solo para debug si no tambien para hacer un codigo mas optimo y limpio.
+## Belén
+- Siempre caemos en el error de pensar que solo porque probamos el código con el ejemplo más básico, ya está perfecto, pero normalmente no es así. Yo siento que las pruebas nos permiten quitar esa venda que nos ponemos al hacer un código y nos ayuda a ir más allá. Normalmente, se prueban los casos que deberían ocurrir, mientras que los que no deberían se dejan de lado. Por lo que, las pruebas servirían para tener en cuenta aquellos casos.
