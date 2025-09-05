@@ -215,7 +215,7 @@ Aplicamos TDD para la clase `AccountValidator`:
 
 ### Evidencia
 
-![pruebas1](docs/imagenes/pruebas1.png)
+![pruebas1](docs/imagenes/pruebas1.jpeg)
 
 ### Implementación de la Gestión de Cuentas con TDD
 Aplicamos TDD para las clases `AccountManagement`, `AccountMovementManagement` y relacionadas:
