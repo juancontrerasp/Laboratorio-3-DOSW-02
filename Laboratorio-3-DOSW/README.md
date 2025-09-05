@@ -152,7 +152,7 @@
 ## Excel
 ![Tabla Excel](docs/imagenes/atributosCalidad.png)
 
-# Reto 3 - Planning Poker
+# 🃏 Reto 3 - Planning Poker
 
 Este programa en Java implementa una simulación básica de **Planning Poker**, técnica utilizada en metodologías ágiles para estimar el esfuerzo de historias de usuario en un equipo de desarrollo.
 
@@ -189,5 +189,28 @@ El uso de la **lista de Fibonacci** (`List<Integer> fibonacci = Arrays.asList(1,
 Se utiliza al recorrer listas (`for (String historia : historias)` y `for (Map.Entry<String, Integer> e : estimaciones.entrySet())`) para acceder a los elementos de manera uniforme sin exponer su implementación interna.
 
 ## 📸 Evidencia
-![Reto 3](docs/imagenes/evidenciaReto3.png)
+![Resultados del código de Reto 3](docs/imagenes/evidenciaReto3.png)
 ---
+
+# 🏃🏼‍♂️ Reto 5 - Corran que ahí viene el JaCOCO
+
+## 🔄 Actualización del pom.xml
+![Actualización del pom](docs/imagenes/actualizacionJacoco.png)
+
+Al ejecutar el comando **mvn clean install**, salía el mensaje de "FAILED BUILD" debido a que la cobertura de los test no llegaba al mínimo requerido
+### 📸 Evidencia
+![Covertura inicial capturas](docs/imagenes/coberturaInicialConsola.png)
+
+Viendo el archivo .html generado por JaCOCO, se obtuvieron los siguientes resultados:
+- Cobertura de instrucciones: 22% (375 de 482 instrucciones no fueron cubiertas).
+- Cobertura de ramas: 23% (20 de 26 ramas no fueron cubiertas).
+Es relevante mencionar que tanto agilismo como lab arrojan 0% de cobertura porque el proyecto completo de Bankify se manejó en util
+
+![Covertura inicial](docs/imagenes/coberturaInicial.png)
+
+## 🔹 Mejorando la cobertura
+Para mejorar la cobertura del proyecto, se crearon las clases BankifyTest y MovementTest. Se puede ver en la siguiente imagen que la cobertura de util ya supera el 85%
+
+![Covertura util](docs/imagenes/coberturaCompletaUtil.png)
+
+En sí, fue necesario añadir tests para comprobar que las reglas de negocio relacionadas con los montos, se cumplan. También se realizaron los tests correspondientes para verificar el funcionamiento de la clase "central" Bankify.
