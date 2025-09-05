@@ -64,3 +64,6 @@ lo componen `Actores`, `casos de uso` y `relaciones`(asociación, inclusión, ex
 
 Consideramos que el mas dificil es el de coraje por que imponerse a alguien dentro de un equipo para argumentar algo 
 con lo que no se esta deacuerdo puede sentirse conflictivo, y es algo que se evita muchisimo normalmente.
+
+## Evidencias commits:
+![Evidencia del historial de los commits](/Laboratorio-3-DOSW/docs/imagenes/historialCommits.png)
