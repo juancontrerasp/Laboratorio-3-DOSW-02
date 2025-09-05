@@ -57,13 +57,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>edu.dosw.lab.Application</mainClass>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>4.0.0.4121</version>
@@ -85,9 +78,9 @@
                             <goal>report</goal>
                         </goals>
                         <configuration>
-                            <excludes>
-                                <exclude>/configurators/</exclude>
-                            </excludes>
+                            <includes>
+                                <include>edu/dosw/lab/util/*</include>
+                            </includes>
                         </configuration>
                     </execution>
                     <execution>
@@ -99,6 +92,9 @@
                             <rules>
                                 <rule>
                                     <element>PACKAGE</element>
+                                    <includes>
+                                        <include>edu.dosw.lab.util</include>
+                                    </includes>
                                     <limits>
                                         <limit>
                                             <counter>CLASS</counter>

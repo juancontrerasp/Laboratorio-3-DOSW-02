@@ -214,3 +214,23 @@ Para mejorar la cobertura del proyecto, se crearon las clases BankifyTest y Move
 ![Covertura util](docs/imagenes/coberturaCompletaUtil.png)
 
 En sí, fue necesario añadir tests para comprobar que las reglas de negocio relacionadas con los montos, se cumplan. También se realizaron los tests correspondientes para verificar el funcionamiento de la clase "central" Bankify.
+
+---
+
+# 🐋 Reto 6 - SonarQube
+
+## 📸 Evidencia con los pasos realizados
+### 🔹 Descarga de la imagen, arranque del servicio y validación funcionamiento
+![Descarga de la imagen y arranque del servicio](docs/imagenes/descargaValidacionDocker.png)
+
+### 🔹 Instalación en el IDE
+![Instalación en el IDE](docs/imagenes/instalacionIDE.png)
+
+### 🔹 Cambios en el pom.xml
+![Plugin](docs/imagenes/pom1.png)
+![Dependencias](docs/imagenes/pom2.png)
+
+### 🔹 Resultados
+![Resultado1](docs/imagenes/sonarqube1.png)
+![Resultado2](docs/imagenes/sonarqube2.png)
+![Resultado3](docs/imagenes/sonarqube3.png)
