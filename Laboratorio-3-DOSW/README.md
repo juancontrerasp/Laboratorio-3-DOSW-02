@@ -192,6 +192,44 @@ Se utiliza al recorrer listas (`for (String historia : historias)` y `for (Map.E
 ![Resultados del código de Reto 3](docs/imagenes/evidenciaReto3.png)
 ---
 
+# Reto 4 - Tiempo De Desarrollo
+
+## Cómo Resolvimos el Reto
+Para resolver este reto, trabajamos en equipo basándonos en los retos anteriores. Seguimos el ciclo de Test-Driven Development (TDD): Rojo (escribir pruebas que fallen), Verde (implementar código para que pasen las pruebas) y Refactor (mejorar el código sin alterar su funcionalidad). Implementamos las clases principales utilizando Java, JUnit 5 para las pruebas unitarias, Streams y Lambdas para optimizar el código, y agregamos JavaDoc a cada método y clase.
+
+### Creación de Clases Modelo Principales
+Creamos las clases modelo clave con sus atributos y métodos (getters y setters):
+- **`Account`**: Incluye número de cuenta, saldo, banco, historial de movimientos y usuario asociado. Métodos para agregar saldo y realizar movimientos.
+- **`User`**: Gestiona una lista de cuentas, calcula el saldo total usando Streams (e.g., `accounts.stream().map(Account::getAccountBalance).reduce(BigDecimal.ZERO, BigDecimal::add)`), y métodos para obtener saldos y realizar movimientos.
+- **`Bank`**: Enumeración con bancos soportados (Bancolombia "01", Davivienda "02") y su código de prefijo.
+- **`Movement`**: Representa transferencias con monto, origen y destino, incluyendo validaciones en el constructor.
+- **`Bankify`**: Clase central que integra validación, creación y gestión de cuentas usando un Hashtable para almacenarlas.
+
+Todas las clases incluyen JavaDoc detallando su propósito y métodos.
+
+### Implementación de la Validación de Cuentas con TDD
+Aplicamos TDD para la clase `AccountValidator`:
+- **Rojo**: Escribimos pruebas unitarias en `AccountValidatorTest` usando JUnit 5. Incluimos casos para números nulos, formatos inválidos (usando `@ParameterizedTest` con Streams para proveedores de datos), prefijos incorrectos y válidos.
+- **Verde**: Implementamos `validateAccountNumber` para verificar si el número es de 10 dígitos numéricos y comienza con el prefijo del banco (usando `matches("^[0-9]{10}$")` y `startsWith(bank.getCodigo())`).
+- **Refactor**: Optimizamos el código para mayor claridad, utilizando expresiones regulares y manejando nulos explícitamente. Usamos Streams en los proveedores de pruebas para generar datos de entrada variados.
+
+### Evidencia
+
+![pruebas1](docs/imagenes/pruebas1.jpeg)
+
+### Implementación de la Gestión de Cuentas con TDD
+Aplicamos TDD para las clases `AccountManagement`, `AccountMovementManagement` y relacionadas:
+- **Rojo**: Creamos pruebas en `AccountManagementTest` para creación de cuentas en diferentes bancos, depósitos (simples y múltiples), consultas de saldo, manejo de depósitos cero y cuentas en bancos distintos.
+- **Verde**: Implementamos métodos en `AccountManagement` para crear cuentas, realizar depósitos (`addBalance`) y consultar saldos. En `AccountMovementManagement`, agregamos lógica para validar existencia de cuentas, realizar transferencias (ajustando saldos y creando movimientos).
+- **Refactor**: Usamos Lambdas y Streams donde aplicaba, como en cálculos de saldo total en `User`. Refactorizamos para evitar duplicación, inyectando dependencias (e.g., `Account` recibe `AccountMovementManagement`).
+
+Incluimos JavaDoc en todos los métodos, describiendo parámetros, retornos y excepciones.
+
+
+### Evidencia
+
+![pruebas2](docs/imagenes/pruebas2.png)
+
 # 🏃🏼‍♂️ Reto 5 - Corran que ahí viene el JaCOCO
 
 ## 🔄 Actualización del pom.xml
